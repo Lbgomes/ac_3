@@ -14,3 +14,6 @@ def consultar_item(id_item):
         if item== None:
             raise ItemNaoExisteException
         return {'id':item[0], 'nome':item[1], 'tipo':item[2], 'fisico':item[3], 'magia':item[4], 'agilidade':item[4], 'emUso':[5]}
+
+
+       

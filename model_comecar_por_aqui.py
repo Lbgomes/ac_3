@@ -193,9 +193,9 @@ def atacar_com_magia(atacante, defensor):
     magia = atacante['magia']
     
     if(defensor['vida'] - magia < 0 ):
-        defensor['vida']  0
+        defensor['vida'] = 0
     else:
-        defensor['vida'] - magia
+        defensor['vida'] -= magia
         
 
 '''
@@ -219,6 +219,7 @@ possui algum item, false caso contrário
 Um heroi 10 tem o item 15 se na tabela itemDoHeroi
 temos uma linha com idItem 15 e idHeroi 10
 '''
+
 
 '''
 Ex09
@@ -262,7 +263,12 @@ do banco. Usando as funcoes que já definiu, nao precisará
 fazer acessos a mais
 '''
 def lista_itens_em_uso_do_heroi(idHeroi):
-    pass
+    itens_heroi = itens_do_heroi.itens_do_heroi(idHeroi)
+    itens_em_uso = []
+    for item in itens_heroi:
+        if item["emUso"] == 1:
+            itens_em_uso.append(item)
+    return itens_em_uso
 
 '''
 Ex12
