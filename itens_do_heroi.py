@@ -30,6 +30,7 @@ def heroi_quantos_itens(id_heroi):
         itens_heroi = resp.fetchall()
         return len(itens_heroi)
 
+
 def itens_do_heroi(id_heroi):
     with engine.connect() as con:
         query = text (""" 
@@ -40,4 +41,10 @@ def itens_do_heroi(id_heroi):
         resp = con.execute(query, heroi = id_heroi)
         itens_heroi = resp.fetchall()
         return itens_heroi
-        
+
+
+def itens_em_uso_por_nome_do_heroi(nome)
+    with engine.connect() as con:
+        query = text ("""
+
+        """)
